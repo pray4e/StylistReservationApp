@@ -8,13 +8,15 @@ import { MaterialModule } from './material.module';
 import { SignupComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component'
 import { AppRoutingModule } from './app-routing.module';
-
+import { AppointmentCalendarComponent } from './appointment-calendar/appointment-calendar.component';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    AppointmentCalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -22,8 +24,8 @@ import { AppRoutingModule } from './app-routing.module';
     MaterialModule,
     AppRoutingModule,
     FlexLayoutModule,
-    FormsModule 
-    
+    FormsModule,
+    NgxMaterialTimepickerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

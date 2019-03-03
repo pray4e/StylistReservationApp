@@ -1,0 +1,23 @@
+<section fxLayout="column" fxLayoutAlign="center center">
+    <div><img src="/assets/IMG/a1.PNG" alt="TayLogo" width="400"></div>
+    <p>Experience</p>
+</section>
+  <form fxLayout="column" fxLayoutAlign="center center">
+    <mat-form-field color="accent">
+        <input 
+          matInput placeholder="Appointment Date"
+          [matDatepicker]="scheduler">
+        <mat-datepicker-toggle matSuffix [for]="scheduler"></mat-datepicker-toggle>
+        <mat-datepicker #scheduler></mat-datepicker>
+    </mat-form-field>
+
+<section>
+    <form fxLayout="column" fxLayoutAlign="center center"> 
+        <input matInput placeholder="Appointment Time" 
+        [ngxTimepicker]="appointmentTime" 
+        readonly>
+    <ngx-material-timepicker #appointmentTime [enableKeyboardInput]="true"></ngx-material-timepicker>
+
+    </form>     
+</section>
+  </form>
