@@ -1,29 +1,17 @@
-<section fxLayout="column" fxLayoutAlign="center center">
-  <div><img src="/assets/IMG/a1.PNG" alt="TayLogo" width="400"></div>
-</section>
-<section> 
-  <form fxLayout="column" fxLayoutAlign="center center" #submit="ngForm" (ngSubmit)="onSubmit(submit)" > 
+<section>
+  <form fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center" #submit="ngForm"
+    (ngSubmit)="onSubmit(submit)">
     <mat-form-field>
-      <input 
-        type="email"
-        matInput placeholder="Your email" 
-        ngModel name="email"
-        email required
-        #emailInput="ngModel">
-        <mat-error *ngIf="emailInput.hasError('required')">Field must not be empty. </mat-error>
-        <mat-error *ngIf="!emailInput.hasError('required')">Email is invalid. </mat-error>
+      <input type="email" matInput placeholder="Your email" ngModel name="email" email required #emailInput="ngModel">
+      <mat-error *ngIf="emailInput.hasError('required')">Field must not be empty. </mat-error>
+      <mat-error *ngIf="!emailInput.hasError('required')">Email is invalid. </mat-error>
     </mat-form-field>
-    <mat-form-field hintLabel="Should be at least 7 characters."> 
-      <input 
-      type="password" 
-      matInput placeholder="Your password" 
-      ngModel name="password"
-      required
-      minlength="7"
-      #pwInput="ngModel">
+    <mat-form-field hintLabel="Should be at least 7 characters.">
+      <input type="password" matInput placeholder="Your password" ngModel name="password" required minlength="7"
+        #pwInput="ngModel">
       <mat-hint align="end">{{pwInput.value?.length}} / 7</mat-hint>
       <mat-error>Has to be at least 7 characters long. </mat-error>
     </mat-form-field>
-    <button type="submit" mat-raised-button color="accent">Let's Go</button>
+    <a routerLink="/appointment"><button type="submit" mat-raised-button color="accent" [disabled]="submit.invalid">Let's Go</button></a>
   </form>
 </section>
