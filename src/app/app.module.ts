@@ -11,6 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppointmentCalendarComponent } from './appointment-calendar/appointment-calendar.component';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { HomeComponent } from './home/home.component';
+import { MenuComponent } from './menu/menu.component';
+import { PaymentComponent } from './payment/payment.component';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { HomeComponent } from './home/home.component';
     SignupComponent,
     LoginComponent,
     AppointmentCalendarComponent,
-    HomeComponent
+    HomeComponent,
+    MenuComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,7 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     NgxMaterialTimepickerModule.forRoot(),
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
