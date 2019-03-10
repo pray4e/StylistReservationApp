@@ -18,6 +18,6 @@
       <mat-form-field>
           <input type="text" matInput placeholder="Birthdate" ngModel name="birthdate">
       </mat-form-field>
-      <a routerLink="/appointment"><button type="submit" mat-raised-button color="accent" [disabled]="submit.invalid">Welcome</button></a>
+      <a routerLink="/menu"><button type="submit" mat-raised-button color="accent" [disabled]="submit.invalid" (click)="onSubmit()">Welcome</button></a>
     </form>
   </section>

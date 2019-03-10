@@ -1,7 +1,7 @@
 import { User } from './user.model';
 import { AuthData } from './auth-data.model';
 import { LoginComponent } from './login/login.component';
-
+ 
 export class AuthService {
     private user: User; 
 
