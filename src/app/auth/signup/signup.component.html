@@ -12,6 +12,6 @@
       <mat-hint align="end">{{pwInput.value?.length}} / 7</mat-hint>
       <mat-error>Has to be at least 7 characters long. </mat-error>
     </mat-form-field>
-    <a routerLink="/appointment"><button type="submit" mat-raised-button color="accent" [disabled]="submit.invalid">Let's Go</button></a>
+    <a routerLink="/menu"><button type="submit" mat-raised-button color="accent" [disabled]="submit.invalid"(click)="login()">Let's Go</button></a>
   </form>
 </section>
