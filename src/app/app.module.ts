@@ -14,6 +14,12 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { PaymentComponent } from './payment/payment.component';
 import { AuthService } from './auth/auth.service';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule, AngularFireAuth } from '@angular/fire/auth';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +39,11 @@ import { AuthService } from './auth/auth.service';
     FlexLayoutModule,
     FormsModule,
     NgxMaterialTimepickerModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase, 'stylistReservationApp'),// imports firebase/app needed for everything
+    AngularFirestoreModule, // only needed for database
+    AngularFireStorageModule, // only needed for storage
+    AngularFireAuthModule, //only needed for auth features 
+
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

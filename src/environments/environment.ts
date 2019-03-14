@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyCtAPDaaysTsAZPhY-vmdDhjCZMXXGMdpg',
+    authDomain: 'stylist-reservation-inquiry.firebaseapp.com',
+    databaseURL: 'https://stylist-reservation-inquiry.firebaseio.com',
+    projectId: 'stylist-reservation-inquiry',
+    storageBucket: 'stylist-reservation-inquiry.appspot.com',
+    messagingSenderId: '595572536355'
+  }
 };
 
 /*
